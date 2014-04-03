@@ -13,9 +13,10 @@ def quickSort(list):
   l = quickSort([x for x in list[1:] if x < pivot])
   # sort all characters greater than or equal to the pivot element
   u = quickSort([x for x in list[1:] if x >= pivot])
+  
+  # Sorted chars less than pivot + pivot char + Sorted chars greater than pivot
   return l + [pivot] + u
 
-quickSort(list('Colin'))
 s = 'Colin'
 print "Sorting string: " + s
 print ('').join(quickSort(list(s)))
